@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  xmr:
+    image: lpisces/xmr-stak
+    build:
+      context: ./xmr-stak
+    tty: true
+    ports:
+      - "58080:8080"
