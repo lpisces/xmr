@@ -16,9 +16,10 @@ WORKDIR /tmp/src/build
 RUN cmake3 -DCMAKE_LINK_STATIC=ON -DXMR-STAK_COMPILE=generic -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF ..
 RUN make install
 
+COPY ./cpu.txt bin/
 COPY ./config.txt bin/
 COPY ./pools.txt bin/
-COPY ./cpu.txt bin/
 
 WORKDIR /tmp/src/build/bin
 CMD ./xmr-stak
+

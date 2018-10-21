@@ -8,3 +8,5 @@ services:
     tty: true
     ports:
       - "58080:8080"
+#    sysctls:
+#      - vm.nr_hugepages=128
